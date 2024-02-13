@@ -9,8 +9,10 @@
     <meta name="description" content="Unlock the power of artificial intelligence with Intermediate Data Systems. We specialize in cutting-edge AI solutions, machine learning algorithms, and innovative technologies. Transform your business with our expert team, delivering intelligent solutions tailored to your needs." />
     <meta name="author" content="Intermediate Data Systems" />
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <title>Intermediate Data Systems | Contact Us</title>
@@ -70,103 +72,66 @@
     </div>
     <div class="container">
     <!--Section: Contact v.2-->
-    <section class="section">
-
-        <!--Section heading-->
-        <h2 class="section-heading h1 pt-4">Contact us</h2>
-        <!--Section description-->
-        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate
-            esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam. Quia, minima?</p>
-
-        <div class="row">
-
-            <!--Grid column-->
-            <div class="col-md-8 col-xl-9">
-                <form id ="contact-form" name="contact-form" action="mail.php" method="POST"  onsubmit="return validateForm()" >
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form">
-                                <div class="md-form">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Your name</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form">
-                                <div class="md-form">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Your email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form">
-                                <input type="text" id="subject" name="subject" class="form-control">
-                                <label for="subject" class="">Subject</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
-                        <div class="col-md-12">
-
-                            <div class="md-form">
-                                <textarea type="text" id="message" name="message" class="md-textarea"></textarea>
-                                <label for="message">Your message</label>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--Grid row-->
-
+    <section class="contact_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Get In Touch</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-lg-6 mx-auto">
+              <div class="form_container">
+                <form action="process-form.php" method="post" novalidate>
+                  <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Your Phone:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone" pattern="[0-9]{10}">
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="interest">Additional Interest:</label>
+                    <select class="form-control" id="interest" name="interest" required>
+                      <option value="">Select an option</option>
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                      <option value="option4">Option 4</option>
+                      <option value="option5">Option 5</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group" id="otherInterestDiv">
+                    <label for="otherInterest">Specify other interest:</label>
+                    <input type="text" class="form-control" id="otherInterest" name="otherInterest" placeholder="Other interest" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                    <div class="invalid-feedback">Please enter a message.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="captcha">Enter CAPTCHA:</label>
+                    <input type="text" class="form-control" id="captcha" name="captcha" required>
+                    <div class="invalid-feedback">Please enter the CAPTCHA correctly.</div>
+                  </div>
+                  <div class="btn_box">
+                    <button type="submit" class="btn btn-success">SEND</button>
+                  </div>
                 </form>
-
-                <div class="center-on-small-only">
-                    <a class="btn btn-primary" onclick="validateForm()">Send</a>
-                </div> <div class="status" id="status"></div>
+              </div>
             </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-4 col-xl-3">
-                <ul class="contact-icons">
-                    <li><i class="fa fa-map-marker fa-2x"></i>
-                        <p>San Francisco, CA 94126, USA</p>
-                    </li>
-
-                    <li><i class="fa fa-phone fa-2x"></i>
-                        <p>+ 01 234 567 89</p>
-                    </li>
-
-                    <li><i class="fa fa-envelope fa-2x"></i>
-                        <p>contact@mdbootstrap.com</p>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
+          </div>
         </div>
-
-    </section>
+      </section>
+      
     <!--Section: Contact v.2-->
 </div>
     <!-- info section -->
@@ -295,12 +260,29 @@
     <!-- footer section -->
 
     <!-- Bootstrap JS and Popper.js (optional, for Bootstrap components that require them) JQuery -->
-    
+    <script>
+        // Handle enabling/disabling the "Other" interest field
+        const interestSelect = document.getElementById('interest');
+        const otherInterestDiv = document.getElementById('otherInterestDiv');
+      
+        interestSelect.addEventListener('change', () => {
+          if (interestSelect.value === 'other') {
+            otherInterestDiv.removeAttribute('disabled');
+          } else {
+            otherInterestDiv.setAttribute('disabled', true);
+          }
+        });
+      
+        // Add other JavaScript for form validation and client-side error handling
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
     <!-- custom js -->
     <script src="js/custom.js"></script>
 
