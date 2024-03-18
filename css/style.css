@@ -172,6 +172,7 @@ a:focus {
   flex: 1;
   display: flex;
   align-items: center;
+  background-color: #F2DAD7; /* Changed the slider section BG color - KF */
   padding-top: 45px;
   padding-bottom: 90px; }
   .slider_section .row {
@@ -180,7 +181,7 @@ a:focus {
     width: 100%;
     position: unset; }
   .slider_section .detail-box {
-    color: #ffffff; }
+    color: #000000; } /* Changed the slider section text color - KF */
     .slider_section .detail-box h1 {
       font-weight: bold;
       margin-bottom: 25px;
